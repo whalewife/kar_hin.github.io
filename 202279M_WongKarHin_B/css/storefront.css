@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right:100px;
+    animation: fadeIn 1s;
+}
+
+#back {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    top: 200px;
+    left: 70px;
+    position: absolute;
+}
+
+#back::after { /* animation for underline upon hover*/
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /*x-axis*/
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+#back:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+#back:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#tour {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    top: 200px;
+    left: 70px;
+    position: absolute;
+    top: 205px;
+    left: 400px;
+}
+
+#tour::after { /* animation for underline upon hover*/
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /*x-axis*/
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+#tour:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+#tour:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#music {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 205px;
+    left: 650px;
+}
+
+#music::after { /* animation for underline upon hover*/
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /*x-axis*/
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+#music:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+#music:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#mail {
+    position: absolute;
+    width: 2%;
+    top: 215px;
+    right: 590px;
+}
+
+#store {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 205px;
+    left: 1135px;
+}
+
+#door {
+    width: 14%;
+    position: fixed;
+    top: 257px;
+    left: 1067px;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 10px 5px #D3E4FF;
+    animation: blink 3s infinite ease-in-out alternate;
+}
+
+#door:hover {
+    transform: scale(1.03);
+    animation: none;
+}
+
+#sign {
+    width: 10.2%;
+    position: fixed;
+    top: 278px;
+    left: 96px;
+}
+
+#switch {
+    position: absolute;
+    left: 130px;
+    top: 400px;
+    /* BUTTON */
+    border-color: white;
+    background-color: transparent;
+    /* FONT START */
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    /* FONT END */
+    cursor: pointer;
+}
+
+#material {
+    color: white;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    left: 700px;
+    position: fixed;
+    left: 50px;
+    bottom: -30px;
+}
+
+.socials{
+    position: fixed;
+    right: -200px;
+    bottom: 20px;
+}
+
+#insta {
+    position: inherit;
+    padding-right: 5px;
+}
+
+#fb {
+    position: inherit;
+    padding-right: 5px;
+}
+
+#twt {
+    position: inherit;
+    padding-right: 5px;
+}
+
+#yt {
+    position: inherit;
+    top: 10px;
+}
+
+.video {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes blink {
+    52%, 60%, 79%{
+        opacity: 1;
+    }
+
+    58%, 63%, 76%, 78%{
+        opacity: 0.2;
+    }
+
+    57%, 69%, 77%{
+        opacity: 0.8;
+    }
+}
