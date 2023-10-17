@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    text-align: center;
+}
+
+#open {
+    color: white;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    margin-top: 350px;
+    text-align: center;
+    text-shadow: 3px 3px 0px black;
+    transition-property: font-size;
+    transition-duration: 0.5s;
+    animation: beat 2s ease-in-out infinite;
+}
+
+a:link {
+    color:white;
+    text-decoration: none;
+}
+
+a:visited {
+    color:white;
+    text-decoration: none;
+}
+
+#open:hover {
+    font-size: 45px;
+    text-shadow: 3px 3px 0px black;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes beat{
+	0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.09);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

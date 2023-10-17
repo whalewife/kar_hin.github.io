@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    background-size: cover;
+    animation: fadeIn 1s;
+}
+
+#storelogo {
+    margin-left: 570px;
+    width: 25%;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+#back {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    top: 70px;
+    left: 60px;
+    position: absolute;
+}
+
+#back::after { 
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+#back:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+#back:visited {
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    color: white;
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    top: 480px;
+    position: relative;
+}
+
+.carousel-wrapper {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: block;
+    margin: 0 auto ;
+    border: none;
+    box-shadow: 5px 5px 5px black;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+    border: solid white;
+    border-radius: 3px;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.arrow-prev {
+    left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^= "item"] {
+    display: none;
+}
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url("/img/channelorange.jpg");
+    background-size: cover;
+}
+
+.item-2 {
+    background: url("/img/flowerboy.png");
+    background-size: cover;
+}
+
+.item-3 {
+    background: url("/img/igor.jpg");
+    background-size: cover;
+}
+
+*:target ~ .item-1{
+    opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+    opacity: 1;
+}
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    
+    to {
+        opacity:1;
+    }
+}
